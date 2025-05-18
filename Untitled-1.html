@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnupGurau_HTMLforms</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- About Me Content (from previous assignment) -->
+    <header>
+        <img src="Ecu-big.jpeg" alt="ECU Logo" style="width: 120px; float: left; margin-right: 20px;">
+        <h1>About Me</h1>
+        <p>Hello! I'm Anup Gurau, a learner. </p>
+        <img src="photo.jpg" alt="Anup Gurau Photo" style="width: 120px; border-radius: 8px; float: right;">
+        <div style="clear: both;"></div>
+    </header>
+
+    <!-- New Grid Section -->
+    <section class="grid-container">
+        <!-- Quadrant 1: Calculator -->
+        <div class="grid-item">
+            <h2>Calculator</h2>
+            <form id="calcForm">
+                <label for="num1">Enter Number 1:</label>
+                <input type="number" id="num1" placeholder="Number 1" required>
+                <label for="num2">Enter Number 2:</label>
+                <input type="number" id="num2" placeholder="Number 2" required><br>
+                <p>Select an arithmetic operation:</p>
+                <label><input type="radio" name="op" value="+"> Add (+)</label>
+                <label><input type="radio" name="op" value="-"> Subtract (-)</label>
+                <label><input type="radio" name="op" value="*"> Multiply (*)</label>
+                <label><input type="radio" name="op" value="/"> Divide (/)</label><br>
+                <button type="submit">Calculate</button>
+            </form>
+        </div>
+
+        <!-- Quadrant 2: Factorial -->
+        <div class="grid-item">
+            <h2>Factorial</h2>
+            <form id="factorialForm">
+                <label for="factNum">Enter an integer to calculate its factorial:</label>
+                <input type="number" id="factNum" placeholder="Enter an integer" required>
+                <button type="submit">Calculate</button>
+            </form>
+        </div>
+
+        <!-- Quadrant 3: Fibonacci -->
+        <div class="grid-item">
+            <h2>Fibonacci</h2>
+            <form id="fibForm">
+                <label for="fibInput">Enter a position (n) to find the nth Fibonacci number:</label>
+                <input type="number" id="fibInput" placeholder="Enter position (n)" required>
+                <button type="submit">Get Fibonacci</button>
+            </form>
+        </div>
+
+        <!-- Quadrant 4: Min, Max, Range -->
+        <div class="grid-item">
+            <h2>Stats</h2>
+            <form id="rangeForm">
+                <label for="val1">Enter Value 1:</label>
+                <input type="number" id="val1" placeholder="Value 1" required>
+                <label for="val2">Enter Value 2:</label>
+                <input type="number" id="val2" placeholder="Value 2" required>
+                <label for="val3">Enter Value 3:</label>
+                <input type="number" id="val3" placeholder="Value 3" required>
+                <button type="submit">Get Stats</button>
+            </form>
+        </div>
+
+        <!-- Fifth Grid: Mailing List -->
+        <div class="grid-item full-span">
+            <h2>Mailing List Sign-Up</h2>
+            <form id="mailForm">
+                <label for="fname">First Name:</label>
+                <input type="text" id="fname" placeholder="Anup" required>
+                <label for="lname">Last Name:</label>
+                <input type="text" id="lname" placeholder="Gurau" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="gurauanoop@gmail.com" required>
+                <label for="zip">ZIP Code:</label>
+                <input type="text" id="zip" placeholder="12345" pattern="\d{5}" required><br>
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </form>
+            <div id="signupResults"></div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
